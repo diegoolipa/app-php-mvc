@@ -1,0 +1,55 @@
+body, html{
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    aside.menu {
+        width: 0;
+        overflow: hidden;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    aside.menu {
+        width: 256px; /* Restaurar la anchura original en pantallas más grandes */
+    }
+}
+
+/* Cuando la pantalla es mayor a 768px, se aplica un margen izquierdo de 250px */
+@media screen and (min-width: 769px) {
+    .main-content {
+        margin-left: 250px;
+        margin-top: 10px;
+    }
+}
+
+/* Cuando la pantalla es menor o igual a 768px, se aplica un margen izquierdo de 0 */
+@media screen and (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+
+    }
+}
+
+aside.menu {
+    transition: width 0.3s ease;
+}
+
+.main-content {
+    transition: margin-left 0.3s ease;
+}
+
+.main-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-container.login{
+    height: auto;
+    width: 100%;
+    max-width: 25%;
+    min-width: 10%;
+}
